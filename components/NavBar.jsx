@@ -32,8 +32,8 @@ const NavBar = () => {
         <Container>
           <NavbarToggler onClick={toggle} data-testid="navbar-toggle" />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar data-testid="navbar-items">
-              <NavItem>
+            <Nav className="mr-auto align-items-center d-flex" navbar data-testid="navbar-items">
+              <NavItem className="d-flex align-items-center">
               <PageLink href="https://122longevity.com" className="nav-link" testId="navbar-home">
                   <svg
                     version="1.1"
@@ -145,26 +145,23 @@ const NavBar = () => {
                     z"/>
                   </svg>
                 </PageLink>
-                <PageLink href="/" className="nav-link" testId="navbar-home">
+                <PageLink href="/" className="nav-link ml-2" testId="navbar-home">
                   122 Health
                 </PageLink>
               </NavItem>
-
-
-
               {user && (
                 <>
-                  <NavItem>
+                  <NavItem className="ml-3">
                     <PageLink href="/csr" className="nav-link" testId="navbar-csr">
                       Health Plan
                     </PageLink>
                   </NavItem>
-                  <NavItem>
+                  <NavItem className="ml-3">
                     <PageLink href="/asr" className="nav-link" testId="navbar-external">
                       Analysis
                     </PageLink>
                   </NavItem>
-                  <NavItem>
+                  <NavItem className="ml-3">
                     <PageLink href="/bbb" className="nav-link" testId="navbar-external">
                       Biomarkers
                     </PageLink>
