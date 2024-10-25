@@ -12,7 +12,7 @@ const Hero = () => (
     </p>
     
     <a href="https://buy.stripe.com/fZeg0tfR54t47yEeUU" target="_blank" rel="noopener noreferrer">
-      <ClientButton style={{ marginTop: '40px' }}>Sign Up</ClientButton>
+      <ClientButton style={{ marginTop: '60px' }}>Sign Up</ClientButton>
     </a>
   </div>
 );
