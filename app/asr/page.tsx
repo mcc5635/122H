@@ -32,7 +32,7 @@ export default withPageAuthRequired(
             count={107} 
             color="blue"
           >
-            107 Biomarkers
+            Biomarkers
           </BiomarkerButton>
 
           <BiomarkerButton 
@@ -40,7 +40,7 @@ export default withPageAuthRequired(
             count={2} 
             color="orange"
           >
-            2 Needs Attention
+            Needs Attention
           </BiomarkerButton>
 
           <BiomarkerButton 
@@ -48,7 +48,7 @@ export default withPageAuthRequired(
             count={81} 
             color="green"
           >
-            81 Optimal
+            Optimal
           </BiomarkerButton>
 
           <BiomarkerButton 
@@ -56,7 +56,7 @@ export default withPageAuthRequired(
             count={6} 
             color="red"
           >
-            6 None
+            None
           </BiomarkerButton>
             </div>
 
