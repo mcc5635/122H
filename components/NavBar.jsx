@@ -35,9 +35,9 @@ const NavBar = () => {
             <Nav className="mr-auto" navbar data-testid="navbar-items">
               <NavItem>
                 <PageLink href="https://122longevity.com" className="nav-link" testId="navbar-home">
-                  {/* Use an image or icon here */}
+                  
                   <img
-                    src="/1220.png" // Replace this with the path to your icon or image
+                    src="/1220.svg" // Replace this with the path to your icon or image
                     alt=""
                     width="40" // Adjust size as needed
                     height="40"
