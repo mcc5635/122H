@@ -38,9 +38,17 @@ export default withPageAuthRequired(
           <BiomarkerButton 
             icon={<FontAwesomeIcon icon={faExclamationTriangle} />} 
             count={2} 
-            color="orange"
+            color="red"
           >
             Needs Attention
+          </BiomarkerButton>
+
+          <BiomarkerButton 
+            icon={<FontAwesomeIcon icon={faTimesCircle} />} 
+            count={6} 
+            color="orange"
+          >
+            Moderate Risk
           </BiomarkerButton>
 
           <BiomarkerButton 
@@ -49,14 +57,6 @@ export default withPageAuthRequired(
             color="green"
           >
             Optimal
-          </BiomarkerButton>
-
-          <BiomarkerButton 
-            icon={<FontAwesomeIcon icon={faTimesCircle} />} 
-            count={6} 
-            color="red"
-          >
-            None
           </BiomarkerButton>
             </div>
 
