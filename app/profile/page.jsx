@@ -33,9 +33,7 @@ function Profile() {
               </p>
             </Col>
           </Row>
-          <Row data-testid="profile-json">
-            <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
-          </Row>
+          
         </>
       )}
     </>
