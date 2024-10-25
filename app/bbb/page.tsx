@@ -2,6 +2,8 @@ import React from 'react';
 import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 import ClientButton from './clientbutton';
 import OtherButton from '../asr/otherbutton';
+import { faList, faExclamationTriangle, faExclamationCircle, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default withPageAuthRequired(
   async function BBBPage() {
@@ -13,11 +15,45 @@ export default withPageAuthRequired(
           
           <div data-testid="ssr-text">
             <div style={{ display: 'flex', gap: '20px', marginBottom: '30px', marginTop: '30px' }}>
-              <OtherButton>All</OtherButton>
-              <OtherButton>Needs Attention</OtherButton>
-              <OtherButton>Moderate Risk</OtherButton>
-              <OtherButton>Optimal</OtherButton>     
-              <OtherButton>None</OtherButton>        
+            <OtherButton 
+                icon={<FontAwesomeIcon icon={faList} />} 
+                count={''} 
+                color="blue"
+                >
+                All
+                </OtherButton>
+
+                <OtherButton 
+                icon={<FontAwesomeIcon icon={faExclamationTriangle} />} 
+                count={''} 
+                color="red"
+                >
+                Needs Attention
+                </OtherButton>
+
+                <OtherButton 
+                icon={<FontAwesomeIcon icon={faExclamationCircle} />} 
+                count={''} 
+                color="orange"
+                >
+                Moderate Risk
+                </OtherButton>
+
+                <OtherButton 
+                icon={<FontAwesomeIcon icon={faCheckCircle} />} 
+                count={''} 
+                color="green"
+                >
+                Optimal
+                </OtherButton>
+
+                <OtherButton 
+                icon={<FontAwesomeIcon icon={faTimesCircle} />} 
+                count={''} 
+                color="gray"
+                >
+                None
+            </OtherButton>       
             </div>
 
             <h4 data-testid="ssr-title">Biometrics</h4>

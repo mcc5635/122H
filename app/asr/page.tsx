@@ -4,6 +4,9 @@ import ClientButton from './clientbutton';
 import OtherButton from './otherbutton';
 import BiomarkerButton from './biomarkerbutton';
 import ReadMoreButton from './readmorebutton';
+import { faCheckCircle, faExclamationTriangle, faHeart, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell, faBone, faTint, faShieldAlt, faMicroscope, faFilter, faVial, faBrain, faFireAlt, faCapsules, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 
 export default withPageAuthRequired(
   async function ASRPage() {
@@ -23,10 +26,38 @@ export default withPageAuthRequired(
             </div>
           </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <BiomarkerButton>107 Biomarkers</BiomarkerButton>
-              <BiomarkerButton>2 Needs Attention</BiomarkerButton>
-              <BiomarkerButton>81 Optimal</BiomarkerButton>
-              <BiomarkerButton>6 None</BiomarkerButton>
+            
+          <BiomarkerButton 
+            icon={<FontAwesomeIcon icon={faHeart} />} 
+            count={107} 
+            color="blue"
+          >
+            107 Biomarkers
+          </BiomarkerButton>
+
+          <BiomarkerButton 
+            icon={<FontAwesomeIcon icon={faExclamationTriangle} />} 
+            count={2} 
+            color="orange"
+          >
+            2 Needs Attention
+          </BiomarkerButton>
+
+          <BiomarkerButton 
+            icon={<FontAwesomeIcon icon={faCheckCircle} />} 
+            count={81} 
+            color="green"
+          >
+            81 Optimal
+          </BiomarkerButton>
+
+          <BiomarkerButton 
+            icon={<FontAwesomeIcon icon={faTimesCircle} />} 
+            count={6} 
+            color="red"
+          >
+            6 None
+          </BiomarkerButton>
             </div>
 
             {/* Progress Bar */}
@@ -54,18 +85,101 @@ export default withPageAuthRequired(
         </div>
           <h3 data-testid="ssr-title">Overall Health</h3>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '30px', marginTop: '30px' }}>
-            <OtherButton>Fitness</OtherButton>
-            <OtherButton>Bone Health</OtherButton>
-            <OtherButton>Blood</OtherButton>
-            <OtherButton>Immune Regulation</OtherButton>
-            <OtherButton>Cancer Risk and Detection</OtherButton>
-            <OtherButton>Kidney Health</OtherButton>
-            <OtherButton>Liver Health</OtherButton>
-            <OtherButton>Hormonal Health</OtherButton>
-            <OtherButton>Brain and Nerves</OtherButton>
-            <OtherButton>Metabolism</OtherButton>
-            <OtherButton>Vitamins and Minerals</OtherButton>
-            <OtherButton>Blood Vessels and Heart</OtherButton>
+            <OtherButton 
+                icon={<FontAwesomeIcon icon={faDumbbell} />} 
+                count={''} 
+                color="green"
+              >
+                Fitness
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faBone} />} 
+                count={''} 
+                color="orange"
+              >
+                Bone Health
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faTint} />} 
+                count={''} 
+                color="red"
+              >
+                Blood
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faShieldAlt} />} 
+                count={''} 
+                color="blue"
+              >
+                Immune Regulation
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faMicroscope} />} 
+                count={''} 
+                color="purple"
+              >
+                Cancer Risk and Detection
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faFilter} />} 
+                count={''} 
+                color="teal"
+              >
+                Kidney Health
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faVial} />} 
+                count={''} 
+                color="brown"
+              >
+                Liver Health
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faVial} />} 
+                count={''} 
+                color="pink"
+              >
+                Hormonal Health
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faBrain} />} 
+                count={''} 
+                color="yellow"
+              >
+                Brain and Nerves
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faFireAlt} />} 
+                count={''} 
+                color="orange"
+              >
+                Metabolism
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faCapsules} />} 
+                count={''} 
+                color="blue"
+              >
+                Vitamins and Minerals
+              </OtherButton>
+
+              <OtherButton 
+                icon={<FontAwesomeIcon icon={faHeartbeat} />} 
+                count={''} 
+                color="red"
+              >
+                Blood Vessels and Heart
+              </OtherButton>
           </div>
 
           <h3 data-testid="ssr-title">Physician's Insights</h3>
