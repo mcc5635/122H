@@ -17,7 +17,7 @@ const contentData = [
   {
     title: 'GLP-1 (Ozempic)',
     description:
-      'Manage your weight with personalized GLP-1 treatments, scientifically designed to regulate blood sugar levels and aid in sustainable weight loss, tailored to your health profile and wellness goals.'
+      'Manage your weight with personalized GLP-1 treatments, scientifically designed to aid in sustainable weight loss, tailored to your health profile and wellness goals.'
   },
 ];
 
