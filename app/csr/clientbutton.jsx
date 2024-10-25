@@ -8,7 +8,7 @@ const ClientButton = ({ children }) => {
   return (
     <button
       style={{
-        backgroundColor: clicked ? '#4CAF50' : '#2E2E3A', // Change color when clicked
+        backgroundColor: clicked ? '#808080' : '#2E2E3A', // Change color to grey when clicked
         color: '#fff',
         padding: '10px 20px',
         borderRadius: '8px',
