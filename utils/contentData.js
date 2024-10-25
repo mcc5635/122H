@@ -13,7 +13,13 @@ const contentData = [
     title: 'Analysis',
     description:
       '122 Health provides comprehensive analysis of your health data, utilizing cutting-edge machine learning to predict potential health risks.'
-  }
+  },
+  {
+    title: 'GLP-1 (Ozempic)',
+    description:
+      'Manage your weight with personalized GLP-1 treatments, scientifically designed to regulate blood sugar levels and aid in sustainable weight loss, tailored to your health profile and wellness goals.'
+  },
 ];
+
 
 export default contentData;
