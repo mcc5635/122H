@@ -2,7 +2,7 @@
  * @jest-environment node
  */
 
-import { GET as shows } from '../../../app_/api/shows/route';
+import { GET as shows } from '../../../app/api/shows/route';
 
 const req = jest.fn();
 const res = (() => {
