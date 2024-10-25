@@ -1,12 +1,14 @@
 'use client'; // Add this to enforce client-side rendering
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const ClientButton = ({ children }) => {
+  const [clicked, setClicked] = useState(false); // Add state to handle click feedback
+
   return (
     <button
       style={{
-        backgroundColor: '#2E2E3A',
+        backgroundColor: clicked ? '#4CAF50' : '#2E2E3A', // Change color when clicked
         color: '#fff',
         padding: '10px 20px',
         borderRadius: '8px',
@@ -14,13 +16,17 @@ const ClientButton = ({ children }) => {
         fontSize: '16px',
         border: 'none',
         cursor: 'pointer',
-        outline: 'none', // Removes default outline
-        boxShadow: '0 0 0 3px #2E2E3A' // Adds a custom dark blue outline on focus
+        outline: 'none',
+        boxShadow: '0 0 0 3px #2E2E3A'
       }}
-      onFocus={(e) => e.target.style.boxShadow = '0 0 0 3px #2E2E3A'} // On focus, apply custom dark blue outline
+      onClick={() => {
+        setClicked(!clicked); // Toggle clicked state
+        alert('Button was clicked!'); // Show an alert when the button is clicked
+      }}
+      onFocus={(e) => e.target.style.boxShadow = '0 0 0 3px #2E2E3A'}
       onBlur={(e) => e.target.style.boxShadow = 'none'}
     >
-      {children}
+      {clicked ? 'Clicked!' : children} {/* Change text when clicked */}
     </button>
   );
 };
